@@ -13,8 +13,8 @@ export default function Footer() {
             <div id="d3">
               <p>67 Enterprise Dr.</p>
               <p>Monroe, CT 06468</p>
-              <p>Phone: 203-880-9485 | Monday – Friday</p>
-              <p>Email: info@bmltool.com </p>
+              <p><b>Phone:</b> 203-880-9485 | Monday – Friday</p>
+              <p><b>Email:</b> info@bmltool.com </p>
             </div>
           </div>
           <div id="links">

@@ -34,7 +34,7 @@
 }
 
 .nav a:hover {
-  color: #a04000;
+  color: #FCAF3B;
 }
 
 /* Dropdown container */
@@ -262,7 +262,7 @@
     z-index: 1000;
   }
   .logo img{
-    width: 40vw;
+    width: 10vw;
   }
 
   .nav.mobile-open {

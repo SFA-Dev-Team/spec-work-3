@@ -64,7 +64,7 @@ export default function Industries() {
       
       <div className="industry-content">
         <p>
-As a third-generation family-owned business, we believe in long-lasting partnerships built on integrity, craftsmanship, and commitment. With over 30 years of experience, we’re ready to help you take your next project from concept to completion.
+          As a third-generation family-owned business, we believe in long-lasting partnerships built on integrity, craftsmanship, and commitment. With over 30 years of experience, we’re ready to help you take your next project from concept to completion.
         </p>
         <button className="btn white">Get In Touch</button>
       </div>

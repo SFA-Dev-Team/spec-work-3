@@ -20,16 +20,22 @@
   z-index: 2;
   color: white;
   padding: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
-
+.hero-content.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
 .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
+  font-size: 1.85rem;
   margin-bottom: 2rem;
 }
 
@@ -40,7 +46,7 @@
 }
 
 .btn {
-  padding: 0.8rem 1.5rem;
+  padding: 2vh 3vw;
   border: none;
   font-weight: 600;
   border-radius: 5px;
@@ -49,12 +55,48 @@
 }
 
 .learn-more {
-  background-color: #fbbf24; /* amber-400 */
+  background-color: #FCAF3B; /* amber-400 */
   color: black;
 }
 
 .contact-us {
   background-color: #fff;
-  color: #f59e0b; /* amber-500 */
-  border: 2px solid #f59e0b;
+  color: #FCAF3B; /* amber-500 */
+}
+/* Hover Effects */
+.btn:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.learn-more:hover {
+  background-color: #e0a926; /* slightly darker amber */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-us:hover {
+  background-color: white;
+  color: #FCAF3B;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width:1358px){
+  .hero-content h1{
+    font-size: 3rem;
+  }
+  .hero-content p{
+    font-size: 1.25rem;
+  }
+}
+@media (max-width:650px){
+  .hero{
+    height: auto;
+    padding:5vh 5vw;
+  }
+  .hero-content h1{
+    font-size: 1.75rem;
+  }
+  .hero-content p{
+    font-size: 0.75rem;
+  }
 }

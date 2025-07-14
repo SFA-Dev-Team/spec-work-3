@@ -1,12 +1,9 @@
 .capabilities {
-  padding: 60px 20px;
-  background-color: #f9f9f9;
   text-align: center;
 }
 
 .capabilities h2 {
   font-size: 2rem;
-  margin-bottom: 2rem;
   font-weight: bold;
 }
 
@@ -14,8 +11,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  max-width: 1100px;
-  margin: 0 auto;
+  margin: 0 20vw;
 }
 
 .capability-box {
@@ -33,9 +29,15 @@
 }
 
 .capability-box.orange {
-  background-color: #fbbf24;
+  background-color: #FCAF3B;
 }
 
 .capability-box.gray {
   background-color: #e5e7eb;
+}
+@media screen and (max-width: 778px){
+  .capability-grid{
+    grid-template-columns: 1fr;
+    margin: 0 10vw;
+  }
 }

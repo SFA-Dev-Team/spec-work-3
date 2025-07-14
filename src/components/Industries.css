@@ -1,4 +1,5 @@
 .industries {
+  padding-top: 5vh;
   background-color: #fff;
   text-align: center;
 }
@@ -6,14 +7,13 @@
 .industries h2 {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 2.5rem;
 }
 
 /* Main container for all rows */
 .industry-grid {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 5vh;
   margin: 0 auto;
 }
 
@@ -21,70 +21,54 @@
 .industry-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
   align-items: center;
   text-align: left;
-  padding: 2vh 20vw;
+  padding: 3vh 20vw;
 }
 
 /* Apply orange background to full row */
 .orange-bg {
-  background-color: #fbbf24;
-}
-
-/* Text block */
-.industry-content {
-  padding: 20px;
+  background-color: #FCAF3B;
 }
 
 /* Heading inside content */
 .industry-content h3 {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 10px;
 }
 
 /* Paragraph inside content */
 .industry-content p {
   font-size: 1rem;
-  margin-bottom: 20px;
+  margin-bottom: 2vh;
 }
 
 /* Image block */
 .industry-img {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   border-radius: 8px;
   object-fit: cover;
   justify-self: center;
 }
 
-/* Common button style */
-.btn {
-  padding: 10px 20px;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 /* Orange background button */
 .btn.orange {
-  background-color: #fbbf24;
+  background-color: #FCAF3B;
   color: black;
 }
 
 /* White background button */
 .btn.white {
   background-color: white;
-  color: #f59e0b;
-  border: 2px solid #f59e0b;
+  color: #FCAF3B;
 }
 .orangebalck_bg{
 background: black;
+padding-bottom: 2vh;
 }
 .orangebalck_bg h2{
-    color: rgba(252, 175, 59, 1);
+    color: #FCAF3B;
     padding-top: 2vh;
 }
 .orangebalck_bg .industry-content{
@@ -96,13 +80,20 @@ background: black;
   .industry-row {
     grid-template-columns: 1fr;
     text-align: center;
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
-
+.orangebalck_bg h2{
+  font-size: 1.5rem;
+  padding: 2vh 10vw;
+}
   .industry-content {
-    padding: 10px 0;
+    order: 2;
+    padding: 3vh 0;
   }
 
   .industry-img {
+    order: 1;
     max-width: 100%;
   }
 }
