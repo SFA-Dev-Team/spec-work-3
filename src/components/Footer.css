@@ -1,0 +1,140 @@
+.footer {
+  color: black;
+  padding: 2vh 5vw;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  cursor: pointer;
+}
+
+.footer a:hover {
+  color: #D9891E;
+  text-decoration: underline;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 2rem;
+}
+
+/* Columns on desktop */
+.left-column {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 1.5;
+}
+p{
+  margin: 0px;
+  font-size: 1rem;
+  padding-bottom: 1.5vh;
+}
+#logo {
+  margin-bottom: 1rem;
+}
+
+#logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+#d3 {
+  text-align: left;
+}
+
+#links {
+  flex: 1;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.footer-bottom {
+  text-align: left;
+  border-top: 1px solid #555;
+  padding-top: 10px;
+  margin-top: 10px;
+  font-weight: bold 
+  
+  ;
+}
+@media (max-width:1500px) and (min-width:992px){
+  .left-column {
+      flex: 2;}
+}
+
+/* Media Query: For screen < 992px */
+@media (max-width: 992px) {
+  .footer-top-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #links {
+    flex: 1;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  #d3 {
+    margin-top: 0.5rem;
+    text-align: left;
+  }
+
+  #logo {
+    margin-bottom: 0.5rem;
+  }
+  .footer a{
+    font-size: 1rem;
+  }
+}
+@media (max-width: 482px) {
+  .footer-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .left-column {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #logo,
+  #d3,
+  #links {
+    width: 100%;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  #links {
+    margin-top: 1rem;
+  }
+
+  .footer a {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,332 @@
+* {
+  box-sizing: border-box;
+}
+
+/* General Header */
+.header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1vh 5vw;
+  align-items: center;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+/* Logo */
+.logo img {
+  height: auto;
+}
+
+/* Navigation */
+.nav {
+  gap: 2vw;
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  font-size: 1.1rem;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #a04000;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+.dropbtn::after {
+  content: ' \25BC';
+  font-size: 10px;
+  margin-left: 4px;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  margin-top: 1vh;
+  position: absolute;
+  background-color: #fff;
+  min-width: 220px;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+/* Show dropdown content */
+.dropdown-content.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+  border: none;
+  display: block;
+  padding: 12px 18px;
+  color: black;
+  background-color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.dropdown-content a:hover {
+  background-color: #f2f2f2;
+}
+
+/* Submenu */
+.dropdown-submenu {
+  width: 100%;
+  position: relative;
+}
+
+.dropbtn-submenu {
+  padding: 12px 18px;
+  font-weight: 600;
+  background-color: #fff;
+  color: #000;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.arrow {
+  margin-left: 6px;
+  font-size: 0.8em;
+  transition: transform 0.2s ease;
+}
+.dropdown-submenu-content {
+  background-color: #fdfdfd;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: none;
+  opacity: 0;
+  transform: translateY(-5px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.dropdown-submenu-content a {
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  color: #444;
+  border-radius: 4px;
+}
+
+.dropdown-submenu-content a:hover {
+  background-color: #eee;
+}
+
+.dropdown-submenu-content.show-submenu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Extra class for Our Team and Capital Providers */
+.extra {
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.extra:hover {
+  background-color: #f0f0f0;
+  color: black;
+}
+/* Hide hamburger by default */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 3vw;
+  height: 4vh;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001; /* in front */
+}
+
+.hamburger .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation when open */
+.hamburger .bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger .bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger .bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+.dropdown:hover > .dropdown-content {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+  display: block !important;
+}
+
+.dropdown-submenu:hover > .dropdown-submenu-content {
+  display: block !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+}
+
+.dropdown:hover > .dropbtn::after,
+.dropdown-submenu:hover > .dropbtn-submenu .arrow {
+  transform: rotate(180deg);
+}
+
+/* Responsive: Show hamburger under 1016px */
+@media screen and (max-width: 1090px) {
+  .dropdown-submenu:hover .dropdown-submenu-content,
+  .dropdown-submenu-content.show-submenu {
+    display: block !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
+  }
+
+  .dropdown-submenu:hover .arrow {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-content,
+  .dropdown-submenu-content {
+    transition: all 0.3s ease;
+  }
+
+  .dropdown:hover .dropdown-content,
+  .dropdown-content.show {
+    display: block;
+    position: static;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+  .hamburger {
+    display: flex;
+    margin: auto 0;
+    margin-right: 5vw;
+  }
+  .nav {
+    display: none;
+    position: fixed;
+    top: 0; /* height of header approx */
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    background: white;
+    flex-direction: column;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  .logo img{
+    width: 40vw;
+  }
+
+  .nav.mobile-open {
+    display: flex;
+    margin-top: 15vh;
+    padding-left: 7vw;
+    padding-top: 2vh;
+  }
+
+  /* Stack nav items vertically */
+  .nav > a,
+  .nav .dropdown {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Dropdown content - show full width and no hover */
+  .dropdown-content {
+    box-shadow: none;
+    width: 100%;
+    border: none;
+    background: transparent;
+    display: none;
+    padding-left: 1rem;
+    box-sizing: border-box;
+  }
+  .dropdown-content.show {
+    display: block;
+    position: static;
+  }
+
+  /* Submenu content */
+  .dropdown-submenu-content {
+    padding-left: 1rem;
+    width: 100%;
+  }
+  .dropdown-submenu-content.show-submenu {
+    display: block;
+  }
+  
+  /* Make dropdown toggles full width */
+  .dropbtn, .dropbtn-submenu {
+    width: 100%;
+  }
+
+  /* Extra links style in mobile */
+  .extra {
+    display: block;
+    padding-left: 1rem;
+  }
+  .dropbtn {
+    padding: 0px;
+  }
+}
+@media (max-width:500px) {
+  .hamburger{
+    width: 5vw;
+    height: auto;
+    gap: 1vh;
+  }
+  .hamburger .bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(1vh, 1vh);
+}
+  .hamburger .bar.open:nth-child(3) { 
+  transform: rotate(-45deg) translate(1vh, -1vh);
+}
+}
