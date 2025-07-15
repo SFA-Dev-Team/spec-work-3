@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Capabilities.css';
 
 export default function Capabilities() {
+  const sectionRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setVisible(entry.isIntersecting),
+      { threshold: 0.2 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="capabilities">
+    <section
+      ref={sectionRef}
+      className={`capabilities ${visible ? 'fade-in' : ''}`}
+    >
       <h2>Our Capabilities</h2>
       <div className="capability-grid">
         <div className="capability-box orange">
