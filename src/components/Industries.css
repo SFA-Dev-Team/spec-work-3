@@ -36,7 +36,9 @@
   gap: 5vh;
   margin: 0 auto;
 }
-
+.industry-content{
+  margin:5%;
+}
 /* Each row: 2-column layout (text + image or image + text) */
 .industry-row {
   display: grid;
